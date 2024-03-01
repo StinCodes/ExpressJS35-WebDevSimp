@@ -11,9 +11,14 @@ app.set("view engine", "ejs");
 // })
 
 //render the index.html file with ejs
-app.get("/", (req, res) => {
-  res.render("index", { text: "World" });
-});
+// app.get("/", (req, res) => {
+//   res.render("index", { text: "World" });
+// });
+
+//import router
+const userRouter = require('./routes/users')
+//anything that starts with /users, use the userRouter
+app.use('/users', userRouter)
 
 //set app to listen on port 3000
 app.listen(3000);
