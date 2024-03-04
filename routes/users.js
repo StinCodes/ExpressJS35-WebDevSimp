@@ -48,7 +48,7 @@ router
 
 const users = [{name: 'Kyle'}, {name: 'Sally'}]
 
-//function runs anytime route has parameter of id
+//middleware function runs anytime route has parameter of id
 //req.user gets user at index of id, allows req.user to be called upon as a variable
 //next() is require at the end of the function, allows Express to move to next middleware
 router.param('id', (req, res, next, id)=>{
